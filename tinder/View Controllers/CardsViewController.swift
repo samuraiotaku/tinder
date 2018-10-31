@@ -12,13 +12,15 @@ class CardsViewController: UIViewController {
     
     
     @IBOutlet weak var card: UIImageView!
+    var cardImage : UIImage = UIImage(named:"ryan")!
     var cardInitialCenter: CGPoint!
     var cardCenter: CGPoint!
     var divisor: CGFloat!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanCard(_:)))
         card.isUserInteractionEnabled = true
         card.addGestureRecognizer(panGestureRecognizer)
@@ -86,5 +88,15 @@ class CardsViewController: UIViewController {
     @IBAction func didTapCard(_ sender: UITapGestureRecognizer) {
         performSegue(withIdentifier: "cardTap", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cardTap" {
+            let dvc = segue.destination as? ProfileViewController
+            dvc?.newImage = UIImage(named: "ryan")!
+            
+        }
+    }
+    
+
     
 }

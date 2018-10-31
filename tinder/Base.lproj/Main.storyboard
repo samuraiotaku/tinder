@@ -86,6 +86,7 @@
                         <viewLayoutGuide key="safeArea" id="neT-Ea-Jog"/>
                     </view>
                     <connections>
+                        <outlet property="profileImage" destination="oaE-cW-eUh" id="WZi-zU-kqA"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="tappedDone" modalTransitionStyle="crossDissolve" id="DPG-ap-bga"/>
                     </connections>
                 </viewController>

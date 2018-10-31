@@ -10,9 +10,14 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileImage: UIImageView!
+    var newImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        profileImage.image = newImage
+
     }
     
     @IBAction func backButton(_ sender: Any) {
